@@ -25,7 +25,7 @@
 
   // Subtítulos de módulo -> módulo propietario (para teñir el panel al color del módulo)
   const SUBMODULOS = {
-    'caja': 'ventas', 'cierre': 'ventas', 'cartera': 'clientes', 'entregas': 'proveedores', 'resumen': 'reportes'
+        'caja': 'clientes', 'cierre': 'ventas', 'cartera': 'clientes', 'entregas': 'proveedores', 'resumen': 'reportes'
   };
 
   const selectorHomeOriginal = '#searchGlobalInput';

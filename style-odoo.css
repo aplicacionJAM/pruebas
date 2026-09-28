@@ -106,7 +106,8 @@ body.odoo-desktop .odoo-app-card .oac-label { font-size: 13px; font-weight: 600;
 
 /* ---------------------------------------------------------- HOME (tarjetas) */
 body.odoo-desktop .odoo-home {
-  flex: 1; min-width: 0; padding: 10px 26px 32px; max-width: 1280px; margin: 0 auto;
+  flex: 1; min-width: 0; width: 100%;
+  padding: 10px 26px 32px; max-width: 1280px; margin: 0 auto;
 }
 body.odoo-desktop .odoo-home-head { display: flex; align-items: center; justify-content: space-between; margin: 2px 0 16px; }
 body.odoo-desktop .odoo-home-head h1 { font-size: 22px; font-weight: 800; color: #0f172a; margin: 0; display: flex; align-items: center; gap: 10px; }
@@ -118,7 +119,7 @@ body.odoo-desktop .odoo-tasas .ot-card {
   padding: 14px 18px; box-shadow: 0 1px 2px rgba(15,23,42,.04);
 }
 body.odoo-desktop .odoo-tasas .ot-t { margin: 0; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: #94a3b8; }
-body.odoo-desktop .odoo-tasas .ot-v { margin: 2px 0 0; font-size: 18px; font-weight: 800; color: #0f172a; }
+body.odoo-desktop .odoo-tasas .ot-v { margin: 2px 0 0; font-size: 18px; font-weight: 800; color: var(--accent); }
 body.odoo-desktop .odoo-tasas #odooConv { margin-left: auto; }
 body.odoo-desktop .odoo-modules {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px;
@@ -143,13 +144,20 @@ body.odoo-desktop .odoo-module-card .omc-desc { font-size: 12px; color: #64748b;
 /* --------------------------------------------------- AYUDANTES DE LAYOUT */
 /* Ocultamos la barra lateral antigua y el home antiguo cuando la piel está activa */
 body.odoo-desktop.hide-original-sidebar .sidebar { display: none !important; }
-body.odoo-desktop .odoo-overlay { flex: 1; min-width: 0; display: flex; flex-direction: column; min-height: 100vh; }
+body.odoo-desktop .odoo-overlay { flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; overflow: hidden; }
 
 /* ---- Ajuste estético a los módulos existentes (botones, tarjetas, líneas) ---- */
-body.odoo-desktop .main-container { padding-top: 48px; max-width: 1280px; margin: 0 auto !important; padding-left: 26px; padding-right: 26px; }
+body.odoo-desktop .main-container {
+  box-sizing: border-box;
+  height: 100vh; min-height: 0; overflow: hidden;
+  display: flex; flex-direction: column;
+  padding-top: 48px; max-width: 1280px; margin: 0 auto !important; padding-left: 26px; padding-right: 26px;
+}
 body.odoo-desktop .page-header-fixed {
   position: static; background: transparent;
+  width: 100%; align-self: center;
 }
+body.odoo-desktop .page-container { width: 100%; align-self: center; }
 body.odoo-desktop .module-title { font-size: 1.35rem; }
 body.odoo-desktop .module-header { align-items: center; }
 
@@ -224,6 +232,7 @@ body.odoo-desktop .product-card {
 body.odoo-desktop input, body.odoo-desktop textarea, body.odoo-desktop select {
   border-radius: 10px !important;
 }
+
 body.odoo-desktop .buscador input { border-radius: 999px !important; }
 body.odoo-desktop .module-crumb, body.odoo-desktop .btn-cabezal-sub, body.odoo-desktop .module-crumb-sep { font-size: 1.2rem; }
 
@@ -316,7 +325,7 @@ body.odoo-desktop.dark-mode .odoo-module-card {
   box-shadow: 0 1px 2px rgba(0,0,0,.4);
 }
 body.odoo-desktop.dark-mode .odoo-tasas .ot-t { color: #666; }
-body.odoo-desktop.dark-mode .odoo-tasas .ot-v,
+body.odoo-desktop.dark-mode .odoo-tasas .ot-v { color: var(--accent); }
 body.odoo-desktop.dark-mode .odoo-module-card .omc-label { color: #e0e0e0; }
 body.odoo-desktop.dark-mode .odoo-module-card .omc-desc { color: #94a3b8; }
 body.odoo-desktop.dark-mode .odoo-module-card:hover { border-color: #444; }
