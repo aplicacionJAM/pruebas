@@ -1,0 +1,55 @@
+{
+  "name": "jamp-os-unicalibre-windows",
+  "version": "0.1.0",
+  "description": "JAM POS UnicaLibre - version Windows (escritorio, bandeja, backups)",
+  "main": "electron/main.js",
+  "author": "JAM POS",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.4.11",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.jam.pos.unicalibre",
+    "productName": "JAM POS UnicaLibre",
+    "files": [
+      "electron/**/*",
+      "app.js",
+      "index.html",
+      "style.css",
+      "sw.js",
+      "manifest.json",
+      "trial.js",
+      "web-bridge.js",
+      "html2canvas.min.js",
+      "quagga.min.js",
+      "tailwind.js",
+      "fontawesome.min.css",
+      "fa-*.ttf",
+      "fa-*.woff2",
+      "*.svg",
+      "*.png",
+      "*.ico"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "icon-512.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "runAfterFinish": true
+    },
+    "extraResources": []
+  }
+}

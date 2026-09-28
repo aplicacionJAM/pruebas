@@ -1,0 +1,21 @@
+{
+  "version": "1.1c",
+  "nombre": "JAM POS v1.1 By @felinuxs",
+  "titulo": "Parche 1.1c",
+  "fecha": "2026-09-22",
+  "bloqueo": "Si te quedas con la versión actual podrías perder acceso a las nuevas funciones, correcciones y mejoras publicadas.",
+  "notas": [
+    "Venta a Crédito con ABONO + RESTANTE: ahora puedes cobrar un primer abono (Efectivo, Pago Móvil, Transferencia o Tarjeta) y dejar el resto a crédito con plazo acordado de 7, 15 o 30 días y fecha límite (con hora) para terminar de pagar.",
+    "Crédito solo con cliente completo: la venta a crédito NO se hace a 'Cliente General'; requiere un cliente registrado con todos sus datos (nombre, cédula, teléfono y dirección), si no, la venta se bloquea.",
+    "Tarjeta de deudor en rojo: en la Cartera, los clientes con deuda se distinguen a simple vista con fondo rojo y etiqueta DEUDOR, junto con la fecha de vencimiento y el último abono.",
+    "Ticket de crédito mejorado: imprime ABONO (monto y fecha/hora en que se abonó), PENDIENTE, PLAZO y PAGAR ANTES DEL con fecha y hora.",
+    "Reportes: la tabla de ventas ahora incluye columnas Abono, Pendiente y Vence para las ventas a crédito (pantalla y Excel).",
+    "Silenciar notificaciones: ahora suprime también el aviso de 'Tasa actualizada' (ningún aviso visible ni sonido al cambiar la tasa).",
+    "Tasas vivas: las 3 fuentes (BCV, Al Cambio BCV y Al Cambio USDT) se cargan y se guardan en el dispositivo, disponibles incluso sin internet.",
+    "Sincronización: cabecera reorganizada igual que el resto de los módulos.",
+    "Proveedores / Entregas: un pedido ahora admite VARIOS productos — cada renglón lleva producto + cantidad con un botón (+) que añade otra línea (variante o producto nuevo) y una sola línea con fecha de entrega, hora, lapso (días) y fecha de vencimiento.",
+    "Tarjeta de entrega: con varios productos muestra 'Productos varios' y el total de unidades; al tocar la tarjeta se abre el ticket PEDIDO VIRTUAL con encabezado, proveedor, fecha del pedido, cada producto con su cantidad, total y fechas (Imprimir / WhatsApp / Imagen / Copiar / Cerrar).",
+    "Ajustes del formulario de entrega: etiqueta 'Lapso (días)' reducida a 'Días' con el cuadro angosto (cabe '99' ≈ 3 meses) y 'Fecha entrega' abreviada a 'Fech/entreg'.",
+    "Service Worker v12-a19 para renovar automáticamente la aplicación web/PWA."
+  ]
+}
